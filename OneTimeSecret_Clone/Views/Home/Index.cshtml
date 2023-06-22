@@ -1,0 +1,28 @@
+﻿@model OneTimeSecret_Clone.Models.secretTable
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<main>
+    <div class="input-group mb-3 w-100">
+        <div class="col-xl-8 w-100">
+            @using (Html.BeginForm("CreateSecret", "Home", FormMethod.Post, new { role = "form", @class = "w-100" }))
+            {
+                @Html.AntiForgeryToken()
+
+                @Html.LabelFor(d => d.hash)
+                @Html.TextBoxFor(d => d.hash, new { @class = "form-control" })
+
+                @Html.LabelFor(d => d.secret)
+                @Html.TextAreaFor(d => d.secret, new { @class = "form-control" })
+
+                <br />
+                <div class="row">
+                    <div class="col-md-6 offset-md-3 text-center">
+                        <input type="submit" class="btn btn-success btn-lg" value="Generar" />
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</main>

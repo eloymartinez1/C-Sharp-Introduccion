@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="One_Time_Secret_CloneEntities">
+    <EntitySetMapping Name="secretTable">
+      <EntityTypeMapping TypeName="Model.secretTable">
+        <MappingFragment StoreEntitySet="secretTable">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="secret" ColumnName="secret" />
+          <ScalarProperty Name="hash" ColumnName="hash" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
